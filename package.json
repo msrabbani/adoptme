@@ -1,0 +1,8 @@
+{
+  "name": "react-btholt-v4",
+  "version": "1.0.0",
+  "main": "index.js",
+  "repository": "git@github.com:msrabbani/react-btholt-v4.git",
+  "author": "msrabbani <msrabbanii@gmail.com>",
+  "license": "MIT"
+}

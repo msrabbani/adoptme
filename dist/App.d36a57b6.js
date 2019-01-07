@@ -24495,7 +24495,7 @@ var _react = _interopRequireDefault(require("react"));
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
 var Pet = function Pet(props) {
-  return _react.default.createElement("div", {}, [_react.default.createElement("h1", {}, props.name), _react.default.createElement("h2", {}, props.animal), _react.default.createElement("h2", {}, props.breed)]);
+  return _react.default.createElement("div", null, _react.default.createElement("h1", null, props.name), _react.default.createElement("h2", null, props.animal), _react.default.createElement("h2", null, props.breed));
 };
 
 var _default = Pet;
@@ -24505,7 +24505,7 @@ exports.default = _default;
 
 var _react = _interopRequireDefault(require("react"));
 
-var _reactDom = _interopRequireDefault(require("react-dom"));
+var _reactDom = require("react-dom");
 
 var _Pet = _interopRequireDefault(require("./Pet"));
 
@@ -24541,25 +24541,18 @@ function (_React$Component) {
   }
 
   _createClass(App, [{
-    key: "handleTitleClick",
-    value: function handleTitleClick() {
-      alert("You Click the Title...");
-    }
-  }, {
     key: "render",
     value: function render() {
-      return _react.default.createElement("div", {}, _react.default.createElement("h1", {
-        onClick: this.handleTitleClick
-      }, "Adopt Me!"), _react.default.createElement(_Pet.default, {
+      return _react.default.createElement("div", null, _react.default.createElement("h1", null, "Adopt Me!"), _react.default.createElement(_Pet.default, {
         name: "Julia",
         animal: "Cat",
         breed: "fish"
       }), _react.default.createElement(_Pet.default, {
-        name: "Julio",
+        name: "Bruno",
         animal: "Dog",
-        breed: "Havanese"
+        breed: "Havenese"
       }), _react.default.createElement(_Pet.default, {
-        name: "Twity",
+        name: "Twitty",
         animal: "Bird",
         breed: "Corn"
       }));
@@ -24569,7 +24562,7 @@ function (_React$Component) {
   return App;
 }(_react.default.Component);
 
-_reactDom.default.render(_react.default.createElement(App), document.getElementById("root"));
+(0, _reactDom.render)(_react.default.createElement(App), document.getElementById('root'));
 },{"react":"../node_modules/react/index.js","react-dom":"../node_modules/react-dom/index.js","./Pet":"Pet.js"}],"../node_modules/parcel-bundler/src/builtins/hmr-runtime.js":[function(require,module,exports) {
 var global = arguments[3];
 var OVERLAY_ID = '__parcel__error__overlay__';
@@ -24597,7 +24590,7 @@ var parent = module.bundle.parent;
 if ((!parent || !parent.isParcelRequire) && typeof WebSocket !== 'undefined') {
   var hostname = "" || location.hostname;
   var protocol = location.protocol === 'https:' ? 'wss' : 'ws';
-  var ws = new WebSocket(protocol + '://' + hostname + ':' + "42463" + '/');
+  var ws = new WebSocket(protocol + '://' + hostname + ':' + "45977" + '/');
 
   ws.onmessage = function (event) {
     var data = JSON.parse(event.data);

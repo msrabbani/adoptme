@@ -25043,7 +25043,21 @@ function (_React$Component) {
   }, {
     key: "render",
     value: function render() {
-      return _react.default.createElement("div", null, _react.default.createElement("h1", null, "Adopt Me!"), _react.default.createElement("pre", null, _react.default.createElement("code", null, JSON.stringify(this.state, null, 4))));
+      return _react.default.createElement("div", null, _react.default.createElement("h1", null, "Adopt Me!"), this.state.pets.map(function (pet) {
+        var breed;
+
+        if (Array.isArray(pet.breeds.breed)) {
+          breed = pet.breeds.breed.join(", ");
+        } else {
+          breed = pet.breeds.breed;
+        }
+
+        return _react.default.createElement(_Pet.default, {
+          animal: pet.animal,
+          name: pet.name,
+          breed: breed
+        });
+      }));
     }
   }]);
 
@@ -25078,7 +25092,7 @@ var parent = module.bundle.parent;
 if ((!parent || !parent.isParcelRequire) && typeof WebSocket !== 'undefined') {
   var hostname = "" || location.hostname;
   var protocol = location.protocol === 'https:' ? 'wss' : 'ws';
-  var ws = new WebSocket(protocol + '://' + hostname + ':' + "44229" + '/');
+  var ws = new WebSocket(protocol + '://' + hostname + ':' + "44561" + '/');
 
   ws.onmessage = function (event) {
     var data = JSON.parse(event.data);

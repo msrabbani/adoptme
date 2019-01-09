@@ -25043,19 +25043,7 @@ function (_React$Component) {
   }, {
     key: "render",
     value: function render() {
-      return _react.default.createElement("div", null, _react.default.createElement("h1", null, "Adopt Me!"), _react.default.createElement(_Pet.default, {
-        name: "Julia",
-        animal: "Cat",
-        breed: "fish"
-      }), _react.default.createElement(_Pet.default, {
-        name: "Bruno",
-        animal: "Dog",
-        breed: "Havenese"
-      }), _react.default.createElement(_Pet.default, {
-        name: "Twitty",
-        animal: "Bird",
-        breed: "Corn"
-      }));
+      return _react.default.createElement("div", null, _react.default.createElement("h1", null, "Adopt Me!"), _react.default.createElement("pre", null, _react.default.createElement("code", null, JSON.stringify(this.state, null, 4))));
     }
   }]);
 
@@ -25090,7 +25078,7 @@ var parent = module.bundle.parent;
 if ((!parent || !parent.isParcelRequire) && typeof WebSocket !== 'undefined') {
   var hostname = "" || location.hostname;
   var protocol = location.protocol === 'https:' ? 'wss' : 'ws';
-  var ws = new WebSocket(protocol + '://' + hostname + ':' + "46785" + '/');
+  var ws = new WebSocket(protocol + '://' + hostname + ':' + "44229" + '/');
 
   ws.onmessage = function (event) {
     var data = JSON.parse(event.data);

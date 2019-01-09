@@ -25020,8 +25020,8 @@ function (_React$Component) {
       var _this2 = this;
 
       petfinder.pet.find({
-        output: "full",
-        location: "Nevada City, CA"
+        output: 'full',
+        location: 'Nevada City, CA'
       }).then(function (data) {
         var pets;
 
@@ -25047,12 +25047,13 @@ function (_React$Component) {
         var breed;
 
         if (Array.isArray(pet.breeds.breed)) {
-          breed = pet.breeds.breed.join(", ");
+          breed = pet.breeds.breed.join(', ');
         } else {
           breed = pet.breeds.breed;
         }
 
         return _react.default.createElement(_Pet.default, {
+          key: pet.id,
           animal: pet.animal,
           name: pet.name,
           breed: breed
@@ -25092,7 +25093,7 @@ var parent = module.bundle.parent;
 if ((!parent || !parent.isParcelRequire) && typeof WebSocket !== 'undefined') {
   var hostname = "" || location.hostname;
   var protocol = location.protocol === 'https:' ? 'wss' : 'ws';
-  var ws = new WebSocket(protocol + '://' + hostname + ':' + "44561" + '/');
+  var ws = new WebSocket(protocol + '://' + hostname + ':' + "45761" + '/');
 
   ws.onmessage = function (event) {
     var data = JSON.parse(event.data);

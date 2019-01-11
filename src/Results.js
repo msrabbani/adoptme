@@ -57,7 +57,8 @@ class Results extends React.Component {
                 name={pet.name} 
                 breed={breed}
                 media={pet.media}
-                location={`${pet.contact.city}, ${pet.contact.state}, ${pet.contact.phone}`} 
+                location={`${pet.contact.city}, ${pet.contact.state}, ${pet.contact.phone}`}
+                id={pet.id}
             />;
         })}
       </div>

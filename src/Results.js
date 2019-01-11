@@ -1,10 +1,10 @@
-import React from 'react';
-import pf from 'petfinder-client';
-import Pet from './Pet';
+import React from "react";
+import pf from "petfinder-client";
+import Pet from "./Pet";
 
 const petfinder = pf({
   key: process.env.API_KEY,
-  secret: process.env.API_SECRET,
+  secret: process.env.API_SECRET
 });
 
 class Results extends React.Component {
@@ -12,13 +12,13 @@ class Results extends React.Component {
     super(props);
 
     this.state = {
-      pets: [],
+      pets: []
     };
   }
 
   componentDidMount() {
     petfinder.pet
-      .find({output: 'full', location: 'Nevada City, CA'})
+      .find({ output: "full", location: "Nevada City, CA" })
       .then(data => {
         let pets;
 
@@ -33,7 +33,7 @@ class Results extends React.Component {
         }
 
         this.setState({
-          pets,
+          pets
         });
       });
   }
@@ -46,24 +46,28 @@ class Results extends React.Component {
           let breed;
 
           if (Array.isArray(pet.breeds.breed)) {
-            breed = pet.breeds.breed.join(', ');
+            breed = pet.breeds.breed.join(", ");
           } else {
             breed = pet.breeds.breed;
           }
 
-            return <Pet 
-                key = {pet.id}
-                animal={pet.animal} 
-                name={pet.name} 
-                breed={breed}
-                media={pet.media}
-                location={`${pet.contact.city}, ${pet.contact.state}, ${pet.contact.phone}`}
-                id={pet.id}
-            />;
+          return (
+            <Pet
+              key={pet.id}
+              animal={pet.animal}
+              name={pet.name}
+              breed={breed}
+              media={pet.media}
+              location={`${pet.contact.city}, ${pet.contact.state}, ${
+                pet.contact.phone
+              }`}
+              id={pet.id}
+            />
+          );
         })}
       </div>
     );
   }
 }
 
-export default Results
+export default Results;

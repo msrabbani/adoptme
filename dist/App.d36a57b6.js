@@ -27531,41 +27531,27 @@ function (_React$Component) {
     return _possibleConstructorReturn(_this, (_temp = _this = _possibleConstructorReturn(this, (_getPrototypeOf2 = _getPrototypeOf(Carousel)).call.apply(_getPrototypeOf2, [this].concat(args))), _this.state = {
       photos: [],
       active: 0
-    }, _this.handleIndexClick = function (event) {
-      _this.setState({
-        active: +event.target.dataset.index
-      });
     }, _temp));
   }
 
   _createClass(Carousel, [{
     key: "render",
     value: function render() {
-      var _this2 = this;
-
       var _this$state = this.state,
-          active = _this$state.active,
-          photos = _this$state.photos;
+          photos = _this$state.photos,
+          active = _this$state.active;
       return _react.default.createElement("div", {
         className: "carousel"
-      }, _react.default.createElement("img", {
-        src: photos[active].value,
-        alt: "animal"
-      }), _react.default.createElement("div", {
+      }, _react.default.createElement("div", {
         className: "carousel-smaller"
       }, photos.map(function (photo, index) {
-        return (
-          /* eslint-disable-next-line */
-          _react.default.createElement("img", {
-            onClick: _this2.handleIndexClick,
-            key: photo.value,
-            "data-index": index,
-            src: photo.value,
-            className: index === active ? "active" : "",
-            alt: "animal-thumbnail"
-          })
-        );
-      })));
+        return _react.default.createElement("img", {
+          key: photo.value,
+          src: photo.value,
+          className: index === active ? "active" : "",
+          alt: "animal-thumbnail"
+        });
+      })), _react.default.createElement("code", null, _react.default.createElement("pre", null, JSON.stringify(photos, null, 2))));
     }
   }], [{
     key: "getDerivedStateFromProps",
@@ -27800,7 +27786,7 @@ var parent = module.bundle.parent;
 if ((!parent || !parent.isParcelRequire) && typeof WebSocket !== 'undefined') {
   var hostname = "" || location.hostname;
   var protocol = location.protocol === 'https:' ? 'wss' : 'ws';
-  var ws = new WebSocket(protocol + '://' + hostname + ':' + "34463" + '/');
+  var ws = new WebSocket(protocol + '://' + hostname + ':' + "41573" + '/');
 
   ws.onmessage = function (event) {
     var data = JSON.parse(event.data);

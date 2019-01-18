@@ -21,7 +21,7 @@ class Carousel extends React.Component {
 
         return (
             <div className="carousel">
-                <img src={photos[active].value} alt="animal" />
+                {/*    <img src={photos[active].value} alt="animal" /> */}
                 <div className="carousel-smaller">
                     {photos.map((photo, index) => (
                             <img
@@ -33,7 +33,7 @@ class Carousel extends React.Component {
                     ))}
                     
                 </div>
-                {/* <code><pre>{JSON.stringify(photos, null, 2)}</pre></code> */}
+                  <code><pre>{JSON.stringify(photos, null, 2)}</pre></code>
             </div>
         )
 

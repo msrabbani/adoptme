@@ -27750,6 +27750,10 @@ function (_React$Component) {
       location: "Nevada City, CA",
       animal: "",
       breed: ""
+    }, _this.handleLocationChange = function (event) {
+      _this.setState({
+        location: event.target.value
+      });
     }, _temp));
   }
 
@@ -27760,7 +27764,8 @@ function (_React$Component) {
         className: "search-params"
       }, _react.default.createElement("label", {
         htmlFor: "location"
-      }, "Location", _react.default.createElement("input", {
+      }, this.state.location, _react.default.createElement("input", {
+        onChange: this.handleLocationChange,
         id: "location",
         value: this.state.location,
         placeholder: "Location"
@@ -27865,7 +27870,7 @@ var parent = module.bundle.parent;
 if ((!parent || !parent.isParcelRequire) && typeof WebSocket !== 'undefined') {
   var hostname = "" || location.hostname;
   var protocol = location.protocol === 'https:' ? 'wss' : 'ws';
-  var ws = new WebSocket(protocol + '://' + hostname + ':' + "36279" + '/');
+  var ws = new WebSocket(protocol + '://' + hostname + ':' + "43073" + '/');
 
   ws.onmessage = function (event) {
     var data = JSON.parse(event.data);

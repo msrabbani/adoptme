@@ -27708,6 +27708,8 @@ exports.default = void 0;
 
 var _react = _interopRequireDefault(require("react"));
 
+var _petfinderClient = require("petfinder-client");
+
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
 function _typeof(obj) { if (typeof Symbol === "function" && typeof Symbol.iterator === "symbol") { _typeof = function _typeof(obj) { return typeof obj; }; } else { _typeof = function _typeof(obj) { return obj && typeof Symbol === "function" && obj.constructor === Symbol && obj !== Symbol.prototype ? "symbol" : typeof obj; }; } return _typeof(obj); }
@@ -27754,6 +27756,10 @@ function (_React$Component) {
       _this.setState({
         location: event.target.value
       });
+    }, _this.handleAnimalChange = function (event) {
+      _this.setState({
+        animal: event.target.animal
+      });
     }, _temp));
   }
 
@@ -27764,12 +27770,24 @@ function (_React$Component) {
         className: "search-params"
       }, _react.default.createElement("label", {
         htmlFor: "location"
-      }, this.state.location, _react.default.createElement("input", {
+      }, "Location", _react.default.createElement("input", {
         onChange: this.handleLocationChange,
         id: "location",
         value: this.state.location,
         placeholder: "Location"
-      })));
+      })), _react.default.createElement("label", {
+        htmlFor: "animal"
+      }, "Animal", _react.default.createElement("select", {
+        id: "animal",
+        value: this.state.animal,
+        onChange: this.handleAnimalChange,
+        onBlur: this.handleAnimalChange
+      }, _react.default.createElement("option", null), _petfinderClient.ANIMALS.map(function (animal) {
+        return _react.default.createElement("option", {
+          key: animal,
+          value: animal
+        }, animal);
+      }))));
     }
   }]);
 
@@ -27778,7 +27796,7 @@ function (_React$Component) {
 
 var _default = SearchParams;
 exports.default = _default;
-},{"react":"../node_modules/react/index.js"}],"App.js":[function(require,module,exports) {
+},{"react":"../node_modules/react/index.js","petfinder-client":"../node_modules/petfinder-client/index.js"}],"App.js":[function(require,module,exports) {
 "use strict";
 
 var _react = _interopRequireDefault(require("react"));
@@ -27870,7 +27888,7 @@ var parent = module.bundle.parent;
 if ((!parent || !parent.isParcelRequire) && typeof WebSocket !== 'undefined') {
   var hostname = "" || location.hostname;
   var protocol = location.protocol === 'https:' ? 'wss' : 'ws';
-  var ws = new WebSocket(protocol + '://' + hostname + ':' + "43073" + '/');
+  var ws = new WebSocket(protocol + '://' + hostname + ':' + "34671" + '/');
 
   ws.onmessage = function (event) {
     var data = JSON.parse(event.data);

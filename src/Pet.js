@@ -5,16 +5,17 @@ class Pet extends React.Component {
   render() {
     const { name, animal, breed, media, location, id } = this.props;
 
-    let photo = [];
+    let photos= [];
 
     if (media && media.photos && media.photos.photo) {
-      photo = media.photos.photo.filter(photo => photo["@size"] === "pn");
+      photos = media.photos.photo.filter(photo => photo["@size"] === "pn");
     }
+      const hero = photos[0] ? photos[0].value : "http://placecorgi.com.300.300"
 
     return (
       <Link to={`/details/${id}`} className="pet">
         <div className="image-container">
-          <img src={photo[0].value} alt={name} />
+          <img src={hero} alt={name} />
         </div>
 
         <div className="info">

@@ -11,9 +11,9 @@ class SearchParams extends React.Component {
             <label htmlFor="location">
               Location
               <input
-                onChange={this.handleLocationChange}
+                onChange={context.handleLocationChange}
                 id="location"
-                value={this.state.location}
+                value={context.location}
                 placeholder="Location"
               />
             </label>
@@ -22,9 +22,9 @@ class SearchParams extends React.Component {
               Animal
               <select
                 id="animal"
-                value={this.state.animal}
-                onChange={this.handleAnimalChange}
-                onBlur={this.handleAnimalChange}>
+                value={context.animal}
+                onChange={context.handleAnimalChange}
+                onBlur={context.handleAnimalChange}>
                 <option />
                 {ANIMALS.map(animal => (
                   <option key={animal} value={animal}>
@@ -37,13 +37,13 @@ class SearchParams extends React.Component {
             <label htmlFor="breed">
               Breed
               <select
-                disabled={this.state.breeds.length === 0}
+                disabled={context.breeds.length === 0}
                 id="breed"
-                value={this.state.breed}
-                onChange={this.handleBreedChange}
-                onBlur={this.handleBreedChange}>
+                value={context.breed}
+                onChange={context.handleBreedChange}
+                onBlur={context.handleBreedChange}>
                 <option />
-                {this.state.breeds.map(breed => (
+                {context.breeds.map(breed => (
                   <option key={breed} value={breed}>
                     {breed}
                   </option>

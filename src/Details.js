@@ -49,15 +49,18 @@ class Details extends React.Component {
       });
   }
 
+
   render() {
    
     const { name, animal, breed, location, description, media, showModal } = this.state;
+
+      console.log(this.myH1)
 
     return (
         <div className="details">
             <Carousel media={media} />
         <div>
-          <h1>{name}</h1>
+            <h1 ref={el => (this.myH1 = el)}>{name}</h1>
           <h2>
             {animal} - {breed} - {location}
         </h2>
@@ -66,7 +69,7 @@ class Details extends React.Component {
         {
             showModal ? (
                 <Modal>
-                    <h1>Would you like to adopt me {name} ?</h1>
+                    <h1>Would you like to adopt {name} ?</h1>
                     <div className="buttons">
                         <button onClick={this.toogleModal}>Yes</button>
                         <button onClick={this.toogleModal}>Definetly Yes</button>

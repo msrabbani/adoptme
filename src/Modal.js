@@ -4,8 +4,7 @@ import {createPortal} from 'react-dom'
 const modalRoot = document.getElementById('modal')
 
 class Modal extends React.Component {
-
-    construtor(props) {
+    constructor(props) {
         super(props)
 
         this.el=document.createElement("div")

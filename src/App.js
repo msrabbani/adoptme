@@ -79,7 +79,7 @@ class App extends React.Component {
             <Link to="/">Adopt Me!</Link>
             <Link to="/search-params">
                 <span arial-label="search" role="img">
-                    Search Page
+                    :mag:
                 </span>
             </Link>
       </header>

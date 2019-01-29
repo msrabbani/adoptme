@@ -28031,7 +28031,7 @@ function (_React$Component) {
       }, _react.default.createElement("span", {
         "arial-label": "search",
         role: "img"
-      }, "Search Page"))), _react.default.createElement(_SearchContext.Provider, {
+      }, ":mag:"))), _react.default.createElement(_SearchContext.Provider, {
         value: this.state
       }, _react.default.createElement(_router.Router, null, _react.default.createElement(_Results.default, {
         path: "/"
@@ -28074,7 +28074,7 @@ var parent = module.bundle.parent;
 if ((!parent || !parent.isParcelRequire) && typeof WebSocket !== 'undefined') {
   var hostname = "" || location.hostname;
   var protocol = location.protocol === 'https:' ? 'wss' : 'ws';
-  var ws = new WebSocket(protocol + '://' + hostname + ':' + "41795" + '/');
+  var ws = new WebSocket(protocol + '://' + hostname + ':' + "38579" + '/');
 
   ws.onmessage = function (event) {
     var data = JSON.parse(event.data);

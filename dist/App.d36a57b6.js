@@ -27897,6 +27897,8 @@ function (_React$Component) {
   }, {
     key: "render",
     value: function render() {
+      var _this3 = this;
+
       var _this$state = this.state,
           name = _this$state.name,
           animal = _this$state.animal,
@@ -27905,13 +27907,18 @@ function (_React$Component) {
           description = _this$state.description,
           media = _this$state.media,
           showModal = _this$state.showModal;
+      console.log(this.myH1);
       return _react.default.createElement("div", {
         className: "details"
       }, _react.default.createElement(_Carousel.default, {
         media: media
-      }), _react.default.createElement("div", null, _react.default.createElement("h1", null, name), _react.default.createElement("h2", null, animal, " - ", breed, " - ", location), _react.default.createElement("button", {
+      }), _react.default.createElement("div", null, _react.default.createElement("h1", {
+        ref: function ref(el) {
+          return _this3.myH1 = el;
+        }
+      }, name), _react.default.createElement("h2", null, animal, " - ", breed, " - ", location), _react.default.createElement("button", {
         onClick: this.toogleModal
-      }, "Adopt ", name), _react.default.createElement("p", null, description), showModal ? _react.default.createElement(_Modal.default, null, _react.default.createElement("h1", null, "Would you like to adopt me ", name, " ?"), _react.default.createElement("div", {
+      }, "Adopt ", name), _react.default.createElement("p", null, description), showModal ? _react.default.createElement(_Modal.default, null, _react.default.createElement("h1", null, "Would you like to adopt ", name, " ?"), _react.default.createElement("div", {
         className: "buttons"
       }, _react.default.createElement("button", {
         onClick: this.toogleModal
@@ -28112,9 +28119,9 @@ function (_React$Component) {
       }, "Adopt Me!"), _react.default.createElement(_router.Link, {
         to: "/search-params"
       }, _react.default.createElement("span", {
-        "arial-label": "search",
+        "aria-label": "search",
         role: "img"
-      }, ":mag:"))), _react.default.createElement(_SearchContext.Provider, {
+      }, "\uD83D\uDD0D"))), _react.default.createElement(_SearchContext.Provider, {
         value: this.state
       }, _react.default.createElement(_router.Router, null, _react.default.createElement(_Results.default, {
         path: "/"
@@ -28157,7 +28164,7 @@ var parent = module.bundle.parent;
 if ((!parent || !parent.isParcelRequire) && typeof WebSocket !== 'undefined') {
   var hostname = "" || location.hostname;
   var protocol = location.protocol === 'https:' ? 'wss' : 'ws';
-  var ws = new WebSocket(protocol + '://' + hostname + ':' + "34081" + '/');
+  var ws = new WebSocket(protocol + '://' + hostname + ':' + "46465" + '/');
 
   ws.onmessage = function (event) {
     var data = JSON.parse(event.data);

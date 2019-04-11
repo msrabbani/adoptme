@@ -27907,7 +27907,6 @@ function (_React$Component) {
           description = _this$state.description,
           media = _this$state.media,
           showModal = _this$state.showModal;
-      console.log(this.myH1);
       return _react.default.createElement("div", {
         className: "details"
       }, _react.default.createElement(_Carousel.default, {
@@ -28164,7 +28163,7 @@ var parent = module.bundle.parent;
 if ((!parent || !parent.isParcelRequire) && typeof WebSocket !== 'undefined') {
   var hostname = "" || location.hostname;
   var protocol = location.protocol === 'https:' ? 'wss' : 'ws';
-  var ws = new WebSocket(protocol + '://' + hostname + ':' + "46465" + '/');
+  var ws = new WebSocket(protocol + '://' + hostname + ':' + "32791" + '/');
 
   ws.onmessage = function (event) {
     var data = JSON.parse(event.data);

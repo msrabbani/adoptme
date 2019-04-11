@@ -54,8 +54,6 @@ class Details extends React.Component {
    
     const { name, animal, breed, location, description, media, showModal } = this.state;
 
-      console.log(this.myH1)
-
     return (
         <div className="details">
             <Carousel media={media} />
